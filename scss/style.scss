@@ -1,0 +1,11 @@
+//Heder
+@forward "./components/header";
+
+
+// Footer
+@forward "./components/footer";
+
+
+
+@use './base/reset';
+@use "./base/var";
