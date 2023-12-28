@@ -1,13 +1,106 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
 header {
-  width: 100%;
-  min-height: 528px;
-  background-color: var(--Light-red);
+  width: 375px;
+  height: 600px;
+  padding: 62px 24px;
   border-radius: 0 0 0 94px;
-  background-image: url("../../images/bg-pattern-intro-mobile.svg");
-  background-position: 35% 41%;
+  background-image: url("../../images/bg-pattern-intro-mobile.svg"), linear-gradient(var(--gradient1), var(--gradient2));
+  background-position: 34% 34%;
   background-repeat: no-repeat;
+  position: relative;
+}
+header .header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-container .icon-menu {
+  display: none;
+}
+header .header-container .nav {
+  display: none;
+  width: 100%;
+  height: 512px;
+  margin: 37px auto;
+  background-color: var(--White);
+  border-radius: 5px;
+  z-index: 1;
+}
+header .header-container .nav .ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column no-wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-container .nav .ul .li {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column no-wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-block: 25px;
+  font-size: 1em;
+  cursor: pointer;
+}
+header .header-container .nav .ul .li .conect-submenu {
+  border-radius: 5px;
+  padding-inline: 90px;
+  background-color: var(--Grayish-blue);
+  display: flex;
+  flex-direction: column;
+  flex-flow: column no-wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 24px;
+  width: 85%;
+}
+header .header-container .nav .ul .li .conect-submenu li {
+  padding-left: 1rem;
+  margin-block: 14px;
+  font-weight: 600;
+  font-size: 12px;
+}
+header .header-container .nav .ul .icon-arrow {
+  position: relative;
+}
+header .header-container .nav .ul .icon-arrow::after {
+  position: absolute;
+  content: url(../../images/icon-arrow-dark.svg);
+  right: 110px;
+  top: 0;
+}
+header .header-container .nav .ul .icon-arrow.active::after {
+  transform: rotate(180deg);
+}
+header .header-container .nav hr {
+  width: 85%;
+  height: 1px;
+  background-color: var(--Grayish-blue);
+  margin: 0 auto;
+}
+header .header-container .nav span {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row no-wrap;
+  justify-content: center;
+  align-items: center;
+}
+header .header-container .nav .button-login {
+  margin: 22px auto 0 auto;
+  background: linear-gradient(var(--gradient1), var(--gradient2));
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: var(--White);
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .attribution {
@@ -194,7 +287,8 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: --font;
+  font-family: var(--font);
+  font-weight: 600;
   color: --White;
   /* (Opcional) */
   font-smooth: always;

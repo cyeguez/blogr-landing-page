@@ -6,6 +6,6 @@
 @forward "./components/footer";
 
 
-
+@use "./base/mixins";
 @use './base/reset';
 @use "./base/var";
