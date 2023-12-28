@@ -4,7 +4,8 @@ header {
   height: 600px;
   padding: 62px 24px;
   border-radius: 0 0 0 94px;
-  background-image: url("../../images/bg-pattern-intro-mobile.svg") , linear-gradient(var(--gradient1), var(--gradient2));
+  background-image: url("../../images/bg-pattern-intro-mobile.svg"),
+    linear-gradient(var(--gradient1), var(--gradient2));
   background-position: 34% 34%;
   background-repeat: no-repeat;
   position: relative;
@@ -14,9 +15,9 @@ header {
     @include flex(row, wrap, space-between, center);
 
     .icon-menu {
-      display: none;
     }
     .icon-close {
+      display: none;
     }
 
     .nav {
@@ -37,7 +38,12 @@ header {
           width: 100%;
           margin-block: 25px;
           font-size: 1em;
-          cursor: pointer;
+
+          &:hover {
+            width: 60%;
+            background-color: var(--Very-light-red);
+            cursor: pointer;
+          }
 
           .conect-submenu {
             border-radius: 5px;
@@ -56,8 +62,7 @@ header {
             }
           }
         }
-        .sub-menu {
-        }
+        
 
         .icon-arrow {
           position: relative;
@@ -94,6 +99,60 @@ header {
         color: var(--White);
         font-weight: 600;
         font-size: 12px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .title {
+    width: 75%;
+    margin: 100px auto 0 auto;
+    @include flex(row, wrap, center, center);
+    font-size: 1.625em;
+    font-weight: 600;
+    color: var(--White);
+    text-align: center;
+  }
+  .subtitle {
+    width: 80%;
+    text-align: center;
+    margin: 1rem auto 0 auto;
+    color: var(--White);
+    font-weight: 300;
+    font-size: 1em;
+  }
+
+  .container-buttons {
+    @include flex(row, no-wrap, center, center);
+    gap: 1rem;
+    margin-top: 40px;
+
+    .button {
+      padding: 10px 30px;
+      border: 1px solid var(--White);
+      border-radius: 20px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .button-start{
+      background-color: var(--White);
+      color: var(--Light-red);
+      font-weight: 600;
+
+      &:hover{
+        background-color: var(--Light-red);
+        color: var(--White);
+      }
+    }
+
+    .button-learn{
+      color: var(--White);
+      &:hover{
+        background-color: var(--White);
+        color: var(--Light-red);
       }
     }
   }
