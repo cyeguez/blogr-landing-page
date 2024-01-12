@@ -1,0 +1,16 @@
+.button {
+  white-space: none;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: var(--White);
+  font-weight: 600;
+  border-radius: 50px;
+  color: var(--Very-dark-blue);
+}
+
+
+.hidden {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,11 +1,16 @@
-//Heder
+//Header
 @forward "./components/header";
+
+// main
+@forward "./components/main";
 
 
 // Footer
 @forward "./components/footer";
 
 
-@use "./base/mixins";
+
+
 @use './base/reset';
 @use "./base/var";
+@use "./base/style-general";

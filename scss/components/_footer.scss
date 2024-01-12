@@ -1,7 +1,101 @@
+@use "../base/mixins" as m;
+
+.footer {
+  background: linear-gradient(var(--gradient3), var(--gradient4));
+  margin-top: 5.5625rem;
+  border-radius:0 80px 0 0;
+
+  &__title {
+    color: var(--White);
+    padding-top: 3.9375rem;
+    font-size: 2.25em;
+    margin-bottom: 4.25rem;
+    text-align: center
+  }
+
+  &__container {
+    @include m.flex(column, wrap, flex-start, center);
+
+    .footer__section {
+      margin-bottom: 2.9375rem;
+
+      .footer__subtitle {
+        color: var(--White);
+        margin-bottom: 2rem;
+        font-size: 1em;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+
+    .footer__list {
+      text-align: center;
+    }
+    .footer__list__item {
+      color: var(--White);
+      font-size: 1em;
+      font-weight: 300;
+      line-height: 2rem;
+
+      &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer{
+    @include m.flex(row, no-wrap, space-evenly, flex-start);
+    max-width: 1440px;
+    margin: 0 auto;
+    background: linear-gradient(var(--gradient4), var(--gradient3));
+   
+
+    &__title{
+      padding-top: 0;;
+      margin-top: 67px;
+    }
+
+    &__container{
+      padding-top: 67px;
+      width: 80%;
+      @include m.flex(row, wrap, space-evenly, center);
+     
+      
+      
+
+      .footer__section{
+        
+        
+        height: 200px;
+        @include m.flex(column, no-wrap,flex-start, flex-start);
+        
+
+        .footer__subtitle{
+          text-align: left;
+          padding: 0;
+          margin-left: 0;
+          
+        }
+
+        .footer__list{
+          text-align: start;
+          
+          
+
+        }
+      }
+    }
+  }
 }
