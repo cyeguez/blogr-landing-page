@@ -23,7 +23,7 @@ header {
       width: 100%;
       margin-top: 33px;
       background-color: var(--White);
-      border-radius: 8px;
+      border-radius: 5px;
       box-shadow: 5px 10px 15px rgb(0, 0, 0, 0.2);
       transition: all 100ms ease;
 
@@ -49,7 +49,7 @@ header {
             top: 0;
             right: 6rem;
 
-            &:hover{
+            &:hover {
               text-decoration: underline;
             }
           }
@@ -65,10 +65,10 @@ header {
             padding-block: 1.5rem;
             background-color: var(--Grayish-blue);
             @include m.flex(column, no-wrap, center, center);
-            border-radius: 8px;
+            border-radius: 5px;
             gap: 1.5rem;
 
-            li:hover{
+            li:hover {
               text-decoration: underline;
             }
             // transition: width 100ms ease-in-out;
@@ -103,8 +103,9 @@ header {
           margin-bottom: 1.875rem;
           color: var(--White);
 
-          &:hover{
+          &:hover {
             background: var(--Very-light-red);
+            color: var(--White);
           }
         }
       }
@@ -150,6 +151,173 @@ header {
         background-color: var(--White);
         color: var(--Light-red);
         border: 1px solid var(--Very-light-red);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: min(100%, 1440px);
+    height: 600px;
+    background-image: url("../../images/bg-pattern-intro-desktop.svg"),
+      linear-gradient(var(--gradient1), var(--gradient2));
+    background-repeat: no-repeat;
+    background-position: 36% 36%;
+    border-radius: 0 0 0 88px;
+    .header-container {
+      padding: 48px 21px 0 21px;
+      @include m.flex(row, wrap, space-evenly, center);
+
+      .brand {
+      }
+      .icon-menu {
+        display: none;
+      }
+      .icon-close {
+        display: none;
+      }
+      .nav {
+        width: 80%;
+        height: 50px;
+        margin-top: 0;
+        border-radius: 5px;
+        box-shadow: 5px 10px 15px rgb(0, 0, 0, 0.2);
+        transition: all 100ms ease;
+        box-shadow: none;
+        background-color: transparent;
+        color: var(--White);
+
+        opacity: 1;
+        pointer-events: all;
+        @include m.flex(row, wrap, space-between, center);
+
+        .ul {
+          width: 60%;
+          height: 100%;
+          @include m.flex(row, no-wrap, flex-start, center);
+          padding-block: 0;
+          gap: 2.125rem;
+
+          .li {
+            width: fit-content;
+            @include m.flex(row, no-wrap, flex-start, center);
+            font-size: 1.1875em;
+            font-weight: 600;
+            position: relative;
+
+            a:hover {
+              text-decoration: underline;
+            }
+
+            &::after {
+              position: absolute;
+              content: url("../../images/icon-arrow-light.svg");
+              top: 0;
+              right: -1rem;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+
+            &.active::after {
+              transform: rotate(180deg);
+            }
+          }
+          .sub-menu {
+            position: relative;
+
+            .conect-submenu {
+              position: absolute;
+              width: 169px;
+              top: 25px;
+              padding-block: 1.5rem;
+              background-color: var(--White);
+              @include m.flex(column, no-wrap, center, center);
+              border-radius: 5px;
+              gap: 1.5rem;
+              color: var(--Very-dark-blue);
+
+              li:hover {
+                text-decoration: underline;
+              }
+              // transition: width 100ms ease-in-out;
+            }
+          }
+        }
+
+        hr {
+          display: none;
+        }
+
+        .container-login {
+          margin-top: 0;
+          @include m.flex(row, no-wrap, flex-start, center);
+          gap: 1rem;
+
+          width: fit-content;
+
+          span {
+            font-size: 1.125rem;
+            margin-bottom: 0;
+            font-weight: 600;
+          }
+
+          .button-sign {
+            background: var(--White);
+            margin-bottom: 0;
+            color: var(--Light-red);
+
+            &:hover {
+              background: var(--Very-light-red);
+              color: var(--White);
+            }
+          }
+        }
+      }
+
+      .title {
+        margin-top: 100px;
+        color: var(--White);
+        text-align: center;
+        font-size: 1.625em;
+        font-weight: 600;
+        margin-inline: auto;
+        width: 65%;
+      }
+      .subtitle {
+        margin-top: 1rem;
+        margin-inline: auto;
+        text-align: center;
+        width: 70%;
+        color: var(--Grayish-blue);
+        font-weight: 300;
+      }
+      .container-buttons {
+        margin-top: 2.75rem;
+        @include m.flex(row, no-wrap, center, center);
+        gap: 1rem;
+
+        .button-start {
+          color: var(--Light-red);
+
+          &:hover {
+            background-color: var(--Very-light-red);
+            color: var(--White);
+          }
+        }
+        .button-learn {
+          border: 1px solid var(--White);
+          background-color: var(--Light-red);
+          color: var(--White);
+
+          &:hover {
+            background-color: var(--White);
+            color: var(--Light-red);
+            border: 1px solid var(--Very-light-red);
+          }
+        }
       }
     }
   }
