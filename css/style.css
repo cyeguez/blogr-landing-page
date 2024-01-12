@@ -25,6 +25,7 @@ header .header-container .nav {
   background-color: var(--White);
   border-radius: 8px;
   box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 100ms ease;
 }
 header .header-container .nav .ul {
   display: flex;
@@ -46,11 +47,17 @@ header .header-container .nav .ul .li {
   font-weight: 600;
   position: relative;
 }
+header .header-container .nav .ul .li a:hover {
+  text-decoration: underline;
+}
 header .header-container .nav .ul .li::after {
   position: absolute;
   content: url("../../images/icon-arrow-dark.svg");
   top: 0;
-  right: -1rem;
+  right: 6rem;
+}
+header .header-container .nav .ul .li::after:hover {
+  text-decoration: underline;
 }
 header .header-container .nav .ul .li.active::after {
   transform: rotate(180deg);
@@ -67,6 +74,9 @@ header .header-container .nav .ul .sub-menu .conect-submenu {
   align-items: center;
   border-radius: 8px;
   gap: 1.5rem;
+}
+header .header-container .nav .ul .sub-menu .conect-submenu li:hover {
+  text-decoration: underline;
 }
 header .header-container .nav hr {
   width: calc(100% - 28px);
@@ -92,6 +102,9 @@ header .header-container .nav .container-login .button-sign {
   background: linear-gradient(120deg, var(--gradient1), var(--gradient2));
   margin-bottom: 1.875rem;
   color: var(--White);
+}
+header .header-container .nav .container-login .button-sign:hover {
+  background: var(--Very-light-red);
 }
 header .title {
   margin-top: 100px;
@@ -136,6 +149,7 @@ header .container-buttons .button-learn:hover {
   color: var(--Light-red);
   border: 1px solid var(--Very-light-red);
 }
+
 .main {
   display: none;
 }
@@ -617,6 +631,13 @@ body {
 }
 
 .hidden {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hidden-conet {
+  width: 0;
   height: 0;
   opacity: 0;
   pointer-events: none;

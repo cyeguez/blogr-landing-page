@@ -24,7 +24,8 @@ header {
       margin-top: 33px;
       background-color: var(--White);
       border-radius: 8px;
-      box-shadow: 5px 10px 15px rgb(0 , 0, 0, 0.2);
+      box-shadow: 5px 10px 15px rgb(0, 0, 0, 0.2);
+      transition: all 100ms ease;
 
       .ul {
         @include m.flex(column, no-wrap, center, center);
@@ -38,11 +39,19 @@ header {
           font-weight: 600;
           position: relative;
 
+          a:hover {
+            text-decoration: underline;
+          }
+
           &::after {
             position: absolute;
             content: url("../../images/icon-arrow-dark.svg");
             top: 0;
-            right: -1rem;
+            right: 6rem;
+
+            &:hover{
+              text-decoration: underline;
+            }
           }
 
           &.active::after {
@@ -51,7 +60,6 @@ header {
         }
         .sub-menu {
           .conect-submenu {
-           
             width: calc(100% - 28px);
             margin-top: 1.5rem;
             padding-block: 1.5rem;
@@ -59,7 +67,11 @@ header {
             @include m.flex(column, no-wrap, center, center);
             border-radius: 8px;
             gap: 1.5rem;
-            
+
+            li:hover{
+              text-decoration: underline;
+            }
+            // transition: width 100ms ease-in-out;
           }
         }
       }
@@ -73,10 +85,9 @@ header {
       }
 
       .container-login {
-       
         margin-top: 2.1875rem;
         @include m.flex(column, no-wrap, center, center);
-        
+
         span {
           font-size: 1.125rem;
           margin-bottom: 1rem;
@@ -91,11 +102,15 @@ header {
           );
           margin-bottom: 1.875rem;
           color: var(--White);
+
+          &:hover{
+            background: var(--Very-light-red);
+          }
         }
       }
     }
   }
-  
+
   .title {
     margin-top: 100px;
     color: var(--White);
@@ -104,25 +119,24 @@ header {
     font-weight: 600;
     margin-inline: auto;
     width: 65%;
-
   }
   .subtitle {
     margin-top: 1rem;
     margin-inline: auto;
     text-align: center;
     width: 70%;
-    color:var(--Grayish-blue);
+    color: var(--Grayish-blue);
     font-weight: 300;
   }
   .container-buttons {
     margin-top: 2.75rem;
-    @include m.flex(row, no-wrap, center,center);
+    @include m.flex(row, no-wrap, center, center);
     gap: 1rem;
-    
+
     .button-start {
       color: var(--Light-red);
 
-      &:hover{
+      &:hover {
         background-color: var(--Very-light-red);
         color: var(--White);
       }
@@ -132,69 +146,11 @@ header {
       background-color: var(--Light-red);
       color: var(--White);
 
-      &:hover{
+      &:hover {
         background-color: var(--White);
         color: var(--Light-red);
         border: 1px solid var(--Very-light-red);
-
       }
     }
-  }
-  
-  .main {
-  }
-  .start-section {
-  }
-  .ilustracion-editor {
-  }
-  .container-text {
-  }
-  .start-subtitle {
-  }
-  .parraf {
-  }
-  .start-parraf {
-  }
-  .medium-section {
-  }
-  .wrap-container {
-  }
-  .ilustration-phone {
-  }
-  .container__pattern {
-  }
-  .ilustration-circles {
-  }
-  .description {
-  }
-  .description__title {
-  }
-  .description__parraf {
-  }
-  .end-section {
-  }
-  .ilustration-laptop {
-  }
-  .container-parraf {
-  }
-  .end-subtitle {
-  }
-  .end-parraf {
-  }
-  .footer {
-  }
-  .footer__title {
-  }
-  .footer__container {
-  }
-  .footer__section {
-  }
-  .footer__subtitle {
-  }
-  .footer__list {
-  }
-  .footer__list__item {
-  }
-  .attribution {
   }
 }
