@@ -155,9 +155,10 @@ header .container-buttons .button-learn:hover {
   header {
     width: min(100%, 1440px);
     height: 600px;
+    margin: 0 auto;
     background-image: url("../../images/bg-pattern-intro-desktop.svg"), linear-gradient(var(--gradient1), var(--gradient2));
     background-repeat: no-repeat;
-    background-position: 36% 36%;
+    background-position: 36% 52%;
     border-radius: 0 0 0 88px;
   }
   header .header-container {
@@ -323,22 +324,19 @@ header .container-buttons .button-learn:hover {
     border: 1px solid var(--Very-light-red);
   }
 }
-.main {
-  display: none;
-}
 .main .title {
   font-size: 1.5em;
   color: var(--Very-dark-blue);
   font-weight: 600;
   text-align: center;
+  margin-top: 6.25rem;
 }
 .main .subtitle {
   width: 60%;
   font-size: 1.5em;
   text-align: center;
   font-weight: 600;
-  margin: 0 auto;
-  margin-block: 2.75rem 1.875rem;
+  margin: 2.75rem auto 1.875rem auto;
   color: var(--Very-dark-blue);
 }
 .main .parraf {
@@ -386,13 +384,15 @@ header .container-buttons .button-learn:hover {
   padding-inline: 1rem;
 }
 .main .medium-section .wrap-container .description__title {
-  width: 80%;
+  width: 100%;
   color: var(--White);
   text-align: center;
-  margin: 0 auto;
+  margin: 20px auto;
+  font-size: 2rem;
+  font-weight: 600;
 }
 .main .medium-section .wrap-container .description__parraf {
-  width: 95%;
+  width: 80%;
   margin: 1.5rem auto;
   color: var(--White);
   text-align: center;
@@ -401,7 +401,10 @@ header .container-buttons .button-learn:hover {
   margin-bottom: 100px;
 }
 .main .end-section {
-  margin-top: 136px;
+  margin-top: 71px;
+}
+.main .end-section .end-parraf {
+  width: 80%;
 }
 
 @media screen and (min-width: 768px) {
@@ -468,6 +471,7 @@ header .container-buttons .button-learn:hover {
   .main .medium-section .wrap-container .ilustration-phone {
     width: 40%;
     top: -70px;
+    left: 100px;
   }
   .main .medium-section .wrap-container .description {
     margin-top: -280px;
@@ -475,12 +479,13 @@ header .container-buttons .button-learn:hover {
     padding-inline: 0;
     width: 50%;
     position: absolute;
-    right: 100px;
+    right: 0px;
   }
   .main .medium-section .wrap-container .description__title {
-    width: 80%;
+    width: 100%;
     text-align: left;
     margin: 0;
+    font-size: 2rem;
   }
   .main .medium-section .wrap-container .description__parraf {
     width: 70%;
@@ -503,6 +508,9 @@ header .container-buttons .button-learn:hover {
     max-width: 200%;
     width: 200%;
     margin-left: -260px;
+  }
+  .main .end-section .container-parraf {
+    padding-left: 100px;
   }
   .main .end-section .container-parraf .end-subtitle {
     text-align: start;

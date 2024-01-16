@@ -1,12 +1,13 @@
 @use "../base/mixins" as m;
 
 .main {
-  display: none;
+ 
   .title {
     font-size: 1.5em;
     color: var(--Very-dark-blue);
     font-weight: 600;
     text-align: center;
+    margin-top: 6.25rem;
   }
 
   .subtitle {
@@ -14,8 +15,7 @@
     font-size: 1.5em;
     text-align: center;
     font-weight: 600;
-    margin: 0 auto;
-    margin-block: 2.75rem 1.875rem;
+    margin: 2.75rem auto 1.875rem auto;
     color: var(--Very-dark-blue);
   }
 
@@ -71,14 +71,16 @@
         padding-inline: 1rem;
 
         &__title {
-          width: 80%;
+          width: 100%;
           color: var(--White);
           text-align: center;
-          margin: 0 auto;
+          margin: 20px auto;
+          font-size: 2rem;
+          font-weight: 600;
         }
 
         &__parraf {
-          width: 95%;
+          width: 80%;
           margin: 1.5rem auto;
           color: var(--White);
           text-align: center;
@@ -91,7 +93,13 @@
   }
 
   .end-section {
-    margin-top: 136px;
+    margin-top: 71px;
+
+    .end-parraf{
+      width: 80%;
+    }
+
+
   }
 }
 
@@ -163,6 +171,7 @@
         .ilustration-phone {
           width: 40%;
           top: -70px;
+          left: 100px;
           
         }
   
@@ -172,13 +181,14 @@
           padding-inline: 0;
           width: 50%;
           position: absolute;
-          right: 100px;
+          right: 0px;
           
   
           &__title {
-            width: 80%;            
+            width: 100%;            
             text-align: left;
             margin: 0;
+            font-size: 2rem;
           }
   
           &__parraf {
@@ -207,6 +217,8 @@
       }
 
       .container-parraf {
+        padding-left: 100px;
+
        
        
         .end-subtitle{
