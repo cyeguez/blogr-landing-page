@@ -3,7 +3,7 @@
 header {
   width: min(100%, 375px);
   height: 600px;
-  background-image: url("../../images/bg-pattern-intro-mobile.svg"), linear-gradient(var(--gradient1), var(--gradient2));
+  background-image: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(var(--gradient1), var(--gradient2));
   background-repeat: no-repeat;
   background-position: 36% 36%;
   border-radius: 0 0 0 88px;
@@ -52,7 +52,7 @@ header .header-container .nav .ul .li a:hover {
 }
 header .header-container .nav .ul .li::after {
   position: absolute;
-  content: url("../../images/icon-arrow-dark.svg");
+  content: url("../images/icon-arrow-dark.svg");
   top: 0;
   right: 6rem;
 }
@@ -156,7 +156,7 @@ header .container-buttons .button-learn:hover {
     width: min(100%, 1440px);
     height: 600px;
     margin: 0 auto;
-    background-image: url("../../images/bg-pattern-intro-desktop.svg"), linear-gradient(var(--gradient1), var(--gradient2));
+    background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(var(--gradient1), var(--gradient2));
     background-repeat: no-repeat;
     background-position: 36% 52%;
     border-radius: 0 0 0 88px;
@@ -221,7 +221,7 @@ header .container-buttons .button-learn:hover {
   }
   header .header-container .nav .ul .li::after {
     position: absolute;
-    content: url("../../images/icon-arrow-light.svg");
+    content: url("../images/icon-arrow-light.svg");
     top: 0;
     right: -1rem;
   }
